@@ -11,7 +11,6 @@ class Person
     public string favoriteColour;
     public int age;
     public bool isWorking;
-}
 
 //Displaying information about the person. 
 public void DisplayPersonalInfo()
@@ -25,14 +24,29 @@ public void ChangeFavoriteColour()
     ChangeFavoriteColour = "White";
 }
 
-//Get the age after 10 years.
-public int GetAgeInTenYears()
-{
-    return age + 10;
+    //Get the age after 10 years.
+    public int GetAgeInTenYears()
+    {
+        return age + 10;
+    }
+
+    //Overiding the ToString method to display the details of the information.
+    public override string ToString()
+    {
+        return $"Person Id: {personId}\nFirst Name: {firstName}\nLast Name: {lastName}\nFavorite Colour: {favoriteColour}\nAge: {age}\nIs Working: {IsWorking}";
+    }
 }
 
-//Overiding the ToString method to display the details of the information.
-public override string ToString()
+//Defining the Relation class 
+class Relation
 {
-    return $"Person Id: {personId}\nFirst Name: {firstName}\nLast Name: {lastName}\nFavorite Colour: {favoriteColour}\nAge: {age}\nIs Working: {IsWorking}";
+    //Defining the relationship type attribute.
+    public string RelationshipType;
+
+    //Showing the relationship between the two persons
+    public void ShowRelationShip(Person person1, Person person2)
+    {
+        Console.WriteLine($"Relationship between {person1.firstName} and {person2.firstName} is: {RelationshipType});
+    }
+    
 }
