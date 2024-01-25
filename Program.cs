@@ -12,3 +12,16 @@ class Person
     public int age;
     public bool isWorking;
 }
+
+//Displaying information about the person. 
+public void DisplayPersonalInfo()
+{
+    Console.WriteLine($"Name= {firstName} {lastName}\npersonId: {personID} Name's favorite colour is {favoriteColour}");
+}
+
+//Changing the favorite colour to white
+public void ChangeFavoriteColour()
+{
+    ChangeFavoriteColour = "White";
+}
+
