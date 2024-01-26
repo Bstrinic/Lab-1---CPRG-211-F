@@ -54,11 +54,22 @@ class Relation
 class mainClass
 {
     //Entry point of the program
-    public static void Main(string[] args);
+    public static void Main(string[] args)
+    {
+        // Create Person objects
+        Person person1 = new Person { personId = 1, firstName = "Ian", lastName = "Brooks", favoriteColour = "Red", age = 30, isWorking = true };
+        Person person2 = new Person { personId = 2, firstName = "Gina", lastName = "James", favoriteColour = "Green", age = 18, isWorking = false };
+        Person person3 = new Person { personId = 3, firstName = "Mike", lastName = "Briscoe", favoriteColour = "Blue", age = 45, isWorking = true };
+        Person person4 = new Person { personId = 4, firstName = "Mary", lastName = "Beals", favoriteColour = "Yellow", age = 28, isWorking = true };
 
-    // Create Person objects
-    Person person1 = new Person { personId = 1, firstName = "Ian", lastName = "Brooks", favoriteColour = "Red", age = 30, isWorking = true };
-    Person person2 = new Person { personId = 2, firstName = "Gina", lastName = "James", favoriteColour = "Green", age = 18, isWorking = false };
-    Person person3 = new Person { personId = 3, firstName = "Mike", lastName = "Briscoe", favoriteColour = "Blue", age = 45, isWorking = true };
-    Person person4 = new Person { personId = 4, firstName = "Mary", lastName = "Beals", favoriteColour = "Yellow", age = 28, isWorking = true };
+        //Displaying Gina's information 
+        Console.WriteLine($"{person2.personID}: {person2.firstName} {person2.lastName}'s favorite colour is {person2.favoriteColour}");
+
+        //Displaying Mike's information 
+        Console.WriteLine(person3.ToString());
+
+
+    }
+
+    
 }
